@@ -1,0 +1,6 @@
+com\sample\customconnector\OpenAICompletionService.class
+com\sample\customconnector\model\CompletionResponse.class
+com\sample\customconnector\ConnectorOpenAICompletion$_createHttpClient_closure1.class
+com\sample\customconnector\model\CompletionRequest.class
+com\sample\customconnector\model\Completion.class
+com\sample\customconnector\ConnectorOpenAICompletion.class

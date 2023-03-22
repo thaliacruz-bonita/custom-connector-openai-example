@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<implementation:connectorImplementation xmlns:implementation="http://www.bonitasoft.org/ns/connector/implementation/6.0">
+  <implementationId>connector-openai-completions-impl</implementationId> <!-- Id of the implementation -->
+  <implementationVersion>0.0.1</implementationVersion> <!-- Version of the implementation -->
+  <definitionId>connector-openai-completions</definitionId> <!-- Id of the definition implemented -->
+  <definitionVersion>1.0.0</definitionVersion> <!-- Version of the definition implemented -->
+  <implementationClassname>com.sample.customconnector.ConnectorOpenAICompletion</implementationClassname> <!-- Path to the main implementation class -->
+  <description>Default connector-openai-completions implementation</description>
+
+<!-- retrieved from the pom.xml at build time -->
+<jarDependencies>
+  <jarDependency>connector-openai-completions-0.0.1.jar</jarDependency>
+  <jarDependency>converter-jackson-2.4.0.jar</jarDependency>
+  <jarDependency>logging-interceptor-3.11.0.jar</jarDependency>
+  <jarDependency>okhttp-3.14.9.jar</jarDependency>
+  <jarDependency>okio-1.17.2.jar</jarDependency>
+  <jarDependency>retrofit-2.9.0.jar</jarDependency>
+</jarDependencies>
+
+</implementation:connectorImplementation>
