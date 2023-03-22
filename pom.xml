@@ -112,6 +112,15 @@
 
     </dependencies>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub thaliacruz-bonita Packages</name>
+            <url>https://maven.pkg.github.com/thaliacruz-bonita/custom-connector-openai-example</url>
+        </repository>
+    </distributionManagement>
+
+
     <build>
         <defaultGoal>package</defaultGoal>
         <sourceDirectory>src/main/groovy</sourceDirectory>
