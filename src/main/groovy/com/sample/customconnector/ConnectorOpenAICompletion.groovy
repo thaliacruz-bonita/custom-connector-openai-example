@@ -17,7 +17,7 @@ class ConnectorOpenAICompletion extends AbstractConnector {
     def static final NOTES_INPUT = "notes"
     def static final URL_INPUT = "url"
     def static final TOKEN_INPUT = "token"
-    def static final COMPLETION_OUTPUT = "text"
+    def static final COMPLETION_OUTPUT = "completion"
 
     def OpenAICompletionService service
     /**
@@ -51,15 +51,22 @@ class ConnectorOpenAICompletion extends AbstractConnector {
      */
     @Override
     void executeBusinessLogic() throws ConnectorException {
+        //get the inputs
         def notes = getInputParameter(NOTES_INPUT)
         def token = getInputParameter(TOKEN_INPUT)
         log.info "$NOTES_INPUT : $notes"
+
+        //create the request
         def requestBody = new CompletionRequest(notes)
 
+        //call the API
         def response = getService().call(token, requestBody).execute()
+
+        // get the response and set the connectors outputs accordingly
         if (response.isSuccessful()){
             def choices = response.body().getTextChoices()
             if (!choices.isEmpty()){
+                // set the output
                 setOutputParameter(COMPLETION_OUTPUT, choices[0])
             }
             else{

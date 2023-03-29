@@ -18,7 +18,10 @@ class OpenAICompletionServiceTest extends Specification{
         def service = ConnectorOpenAICompletion.createService(httpClient, "https://api.openai.com/")
 
         when: 'sending test notes'
-        def request = new CompletionRequest("This is a test")
+        def request = new CompletionRequest("French: good grades, keep the good job\n" +
+                "Math: more study, problems with calculus\n" +
+                "Physics: interested in subject, passionate about it. \n" +
+                "Overall good behavior in class.\n")
         def call = service.call(TOKEN, request)
         def Response<CompletionResponse> response = call.execute()
 

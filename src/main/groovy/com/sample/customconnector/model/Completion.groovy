@@ -6,4 +6,3 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 public class Completion implements Serializable {
     String text;
 }
-

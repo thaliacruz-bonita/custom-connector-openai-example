@@ -7,11 +7,12 @@
 
     <!-- Connector inputs -->
     <input mandatory="true" name="notes" type="java.lang.String"/>
+    <input mandatory="true" name="token" type="java.lang.String"/>
     <input mandatory="true" name="url" type="java.lang.String" defaultValue="https://api.openai.com/"/>
 
 
     <!-- Connector outputs -->
-    <output name="text" type="com.sample.customconnector.model.Completion"/>
+    <output name="completion" type="com.sample.customconnector.model.Completion"/>
 
     <!--
        Pages and widgets to use the connector in the Bonita Studio.
